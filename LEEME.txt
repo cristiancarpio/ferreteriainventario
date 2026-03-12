@@ -1,0 +1,72 @@
+# FERRETERÍA PRO — Guía de personalización por cliente
+
+## Archivos del proyecto
+- index.html     → La app completa
+- manifest.json  → Nombre e ícono de la app instalada
+- icon-192.png   → Ícono pequeño (pantalla de inicio)
+- icon-512.png   → Ícono grande (splash screen)
+
+---
+
+## Cómo personalizar para cada cliente
+
+### 1. Cambiar el nombre de la ferretería
+
+**En manifest.json** (líneas 2 y 3):
+```json
+"name": "Ferretería García",
+"short_name": "García",
+```
+
+**En index.html** buscar (Ctrl+F):
+```
+Ferretería <span>Pro</span>
+```
+Cambiar por:
+```
+Ferretería <span>García</span>
+```
+
+---
+
+### 2. Cambiar el color principal
+
+El color naranja por defecto es #f59e0b.
+
+**En manifest.json** (línea 7):
+```json
+"theme_color": "#f59e0b",
+```
+
+**En index.html** buscar:
+```
+--accent:   #f59e0b;
+```
+Cambiar ambos por el color del cliente.
+
+Colores sugeridos:
+- Naranja (default):  #f59e0b
+- Azul:               #3b82f6
+- Verde:              #22c55e
+- Rojo:               #ef4444
+- Violeta:            #8b5cf6
+
+---
+
+### 3. Subir a GitHub Pages (por cliente)
+
+1. Crear repositorio nuevo en github.com
+2. Subir los 4 archivos: index.html, manifest.json, icon-192.png, icon-512.png
+3. Settings → Pages → Branch: main → Save
+4. URL resultante: https://tunombre.github.io/nombre-repo
+
+---
+
+### 4. Primer uso del cliente
+
+1. Darle la URL
+2. Que entre desde Chrome (Android) o Safari (iPhone)
+3. Android: menú 3 puntitos → "Añadir a pantalla de inicio"
+4. iPhone: ícono compartir → "Agregar a pantalla de inicio"
+5. Contraseñas por defecto: dueño=1234 / empleado=0000
+6. Lo primero: cambiar contraseñas en ⚙️ Configurar
